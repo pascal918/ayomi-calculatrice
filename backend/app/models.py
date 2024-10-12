@@ -16,6 +16,14 @@ class UserBase(SQLModel):
 class UserCreate(UserBase):
     password: str = Field(min_length=8, max_length=40)
 
+class Operation(SQLModel, table=True):
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True, index=True)
+    expression: str = Field(max_length=255)
+    result: float = Field(default=None)
+
+# Properties to receive on Operation creation
+class OperationCreate(Operation):
+    pass
 
 class UserRegister(SQLModel):
     email: EmailStr = Field(max_length=255)
