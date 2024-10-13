@@ -1,3 +1,11 @@
+# Quick start in local
+1. Clone the repository:
+2. docker compose watch
+3. Automatic Interactive Docs (Swagger UI): http://localhost:8000/docs
+4. test the API with calculate POST "5 3 + 2 *" 
+5. test the API with calculate GET 
+
+
 # Ayomi NPI Full Stack FastAPI
 
 <a href="https://github.com/fastapi/full-stack-fastapi-template/actions?query=workflow%3ATest" target="_blank"><img src="https://github.com/fastapi/full-stack-fastapi-template/workflows/Test/badge.svg" alt="Test"></a>
