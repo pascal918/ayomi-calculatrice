@@ -49,8 +49,6 @@ async def export_csv(session: SessionDep, response_class=FileResponse) -> Any:
     with open('operations.csv', 'w', newline='') as csvfile:
         fieldnames = ['id', 'expression', 'result']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        #dir_path = csv.__path__[0]
-        #print('Write the operation csv :', dir_path)
         writer.writeheader()
         for operation in operations:
             writer.writerow({'id': operation.id, 'expression': operation.expression, 'result': operation.result})
